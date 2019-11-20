@@ -1,0 +1,23 @@
+
+<section style="float: left;margin-left: 200px" *ngFor="let book of books">
+  <div  class="container">
+    <div class="row courses_inner">
+      <div  class="grid_inner" >
+        <div   class="grid_item wd44 col-sm-12">
+
+          <div style="margin-top: 135px" class="banner_content text-center">
+            <img style="width: 320px;height:250px; margin-left: 10px" [src]="book.img">
+            <h3 >description: {{book.description}}</h3>
+            <h3 >prix: {{book.prix}}</h3>
+            <button class="btn btn-primary red">details</button>
+            <button class="btn btn-primary red">acheter</button>
+            </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
