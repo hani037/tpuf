@@ -9,6 +9,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BooksComponent } from './books/books.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -19,14 +22,18 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     SignInComponent,
     BooksComponent,
     SignUpComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DetailsComponent]
 })
 export class AppModule { }

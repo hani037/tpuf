@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/style.css",
@@ -35,9 +36,7 @@
               "src/assets/css/owl.theme.css",
               "src/assets/css/flexslider.css",
               "src/assets/css/cd-hero.css",
-
               "src/assets/css/presets/preset3.css"
-
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
@@ -147,6 +146,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Gestion-Formation"
 }
