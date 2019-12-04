@@ -1,0 +1,11 @@
+.A{
+  display: flex;
+}
+.A1{
+  flex: 3;
+  width: 320px;
+}
+
+.A2{
+  flex: 2;
+}

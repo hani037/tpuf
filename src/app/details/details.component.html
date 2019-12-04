@@ -1,7 +1,17 @@
-<h1 mat-dialog-title>Details</h1>
-<div mat-dialog-content>
-  <h3 >description: {{data.description}}</h3>
-  <h3 >prix: {{data.prix}}</h3>
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content class="A" >
+  <img class="A1" [src]="img" alt="">
+  <div class="A2">
+    <h4>Description:</h4>
+  <h5>{{data.description}}</h5>
+    <h4>Prix:</h4>
+    <h5>{{data.prix}}$</h5>
+    <h4>disponibilite:</h4>
+    <h5 >{{data.dis === 'true' ? 'disponible' : 'non disponible' }}</h5>
+    <h4>genre</h4>
+    <h5 >{{data.genre}}</h5>
+</div>
+
 </div>
 <div mat-dialog-actions>
   <button style="margin-left: auto;margin-right: auto" class="btn btn-primary " mat-button mat-dialog-close>Okay</button>

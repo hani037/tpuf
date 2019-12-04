@@ -1,0 +1,25 @@
+<section style="margin-top: 130px">
+  <h1>books</h1>
+  <table class="table">
+    <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nom</th>
+      <th scope="col">prix</th>
+      <th scope="col"><button  (click)="ajouter1()" class="btn btn-primary black">ajouter</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books;let i=index">
+      <th scope="row" >{{i}}</th>
+      <td>{{book.name}}</td>
+      <td>{{book.prix}}</td>
+      <td>  <button (click)="modifier(i)" class="btn btn-primary black">modifier</button>
+        <button  (click)="supprimer(i)" class="btn btn-primary black">supprimer</button></td>
+
+    </tr>
+
+
+    </tbody>
+  </table>
+</section>

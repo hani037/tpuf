@@ -8,11 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BooksComponent } from './books/books.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material';
 import { DetailsComponent } from './details/details.component';
-
+import { PanierComponent } from './panier/panier.component';
+import {HttpClientModule} from '@angular/common/http';
+import { FilterPipe } from './filter.pipe';
+import { AcheterComponent } from './acheter/acheter.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminbooksComponent } from './adminbooks/adminbooks.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +25,12 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     SignInComponent,
     BooksComponent,
-    SignUpComponent,
     DetailsComponent,
+    PanierComponent,
+    FilterPipe,
+    AcheterComponent,
+    AdminComponent,
+    AdminbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -30,10 +38,11 @@ import { DetailsComponent } from './details/details.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DetailsComponent]
+  entryComponents: [DetailsComponent, AcheterComponent]
 })
 export class AppModule { }

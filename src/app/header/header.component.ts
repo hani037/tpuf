@@ -1,5 +1,6 @@
 import {Component, OnChanges, OnInit} from '@angular/core';
 import {AuthService} from '../auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,17 @@ import {AuthService} from '../auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public auth = false;
-  constructor(private authService: AuthService) { }
+  public auth = 0;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
    this.authService.authchanged.subscribe((value) => {
      this.auth = value;
-     console.log(value);
    });
   }
-
+ public dec() {
+    this.authService.dec();
+    this.router.navigate(['/']);
+ }
 }
 

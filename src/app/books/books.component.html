@@ -1,15 +1,33 @@
 
-<section style="float: left;margin-left: 200px" *ngFor="let book of books;let i=index">
-  <div  class="container">
+  <section>
+    <div  class="I">
+    <div class="I1" style="padding: 10px" >
+      <input style="border-radius:10px" placeholder="Filter..." type="text" id="exampleForm2" class="form-control" name="term" [(ngModel)]="serach">
+    </div>
+
+    <div class="I2" >
+      <input [(ngModel)]="op"   type="radio" name="options" value="option1" id="op1" checked>
+      <label for="op1">name</label>
+    </div>
+    <div class="I2">
+      <input [(ngModel)]="op"  type="radio" name="options" value="option2" id="op2" >
+      <label for="op2">prix</label>
+    </div>
+      <div class="I2">
+        <input [(ngModel)]="op"  type="radio" name="options" value="option3" id="op3" >
+        <label for="op2">genre</label>
+      </div>
+    </div>
+      <div style="float: left;margin-left: 200px" *ngFor="let book of books  | filter:serach:op ;let i=index" class="container">
     <div class="row courses_inner">
       <div  class="grid_inner" >
         <div   class="grid_item wd44 col-sm-12">
 
           <div style="margin-top: 135px" class="banner_content text-center">
             <img style="width: 320px;height:250px; margin-left: 10px" [src]="book.img">
-            <h3 >book{{i+1}}</h3>
+            <h3 >{{book.name}}</h3>
             <button (click)="details(book)" class="btn btn-primary red">details</button>
-            <button class="btn btn-primary red">acheter</button>
+            <button [disabled]="!(auth===1&&book.dis=='true') " class="btn btn-primary red" (click)="ajouter(book)">ajouter</button>
             </div>
         </div>
       </div>

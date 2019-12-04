@@ -1,18 +1,4 @@
-<!-- Style switcher start -->
-<div class="style-switch-wrapper">
-  <div class="style-switch-button">
-    <i class="fa fa-sliders"></i>
-  </div>
-  <h3>Style Options</h3>
-  <button id="preset1" class="btn btn-sm btn-primary"></button>
-  <button id="preset2" class="btn btn-sm btn-primary"></button>
-  <button id="preset3" class="btn btn-sm btn-primary"></button>
-  <button id="preset4" class="btn btn-sm btn-primary"></button>
-  <button id="preset5" class="btn btn-sm btn-primary"></button>
-  <button id="preset6" class="btn btn-sm btn-primary"></button>
-  <br/><br/>
-  <a class="btn btn-sm btn-primary close-styler pull-right">Close X</a>
-</div>
+
 <!-- Style switcher end -->
 <div class="body-inner">
   <!-- Header start -->
@@ -31,12 +17,13 @@
         </div><!--/ Logo end -->
         <nav class="collapse navbar-collapse clearfix" role="navigation">
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown active">
-              <a routerLink="" class="dropdown-toggle" data-toggle="dropdown" >Home <i class="fa fa-angle-down"></i></a>
-            <li><a routerLink="/books">books</a></li>
-            <a *ngIf="!auth" class="btn btn-primary white" [routerLink]="'/sign-in'" style="margin-top: 8px">sign-in</a>
-            <a *ngIf="!auth"style="margin-right: 10px" [routerLink]="'/sign-up'" class="btn btn-primary white" style="margin-top: 8px">sign-up</a>
-            <a *ngIf="auth" style="margin-right: 10px"  (click)="auth = false" class="btn btn-primary white" style="margin-top: 8px">logout</a>
+            <li *ngIf="auth==2" routerLinkActive="active"><a routerLink="/admin">users</a></li>
+            <li *ngIf="auth==2" routerLinkActive="active"><a routerLink="/adminb">books</a></li>
+            <li *ngIf="auth==0||auth == 1" routerLinkActive="active"><a routerLink="/home">Home</a></li>
+            <li *ngIf="auth==0||auth == 1" routerLinkActive="active"><a routerLink="/books">books</a></li>
+            <li *ngIf="auth==1" routerLinkActive="active"><a *ngIf="auth" routerLink="/panier">panier</a></li>
+            <a *ngIf="auth==0" class="btn btn-primary white" [routerLink]="'/sign-in'" style="margin-top: 8px">login</a>
+            <a *ngIf="auth==1||auth == 2" style="margin-right: 10px"  (click)="dec()" class="btn btn-primary white" style="margin-top: 8px">logout</a>
           </ul>
         </nav><!--/ Navigation end -->
       </div><!--/ Row end -->

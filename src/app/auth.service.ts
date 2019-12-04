@@ -5,10 +5,23 @@ import {Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  authchanged = new Subject<boolean>()
+  auth = 0;
+  authchanged = new Subject<number>()
   constructor() { }
 
   public changeauth() {
-    this.authchanged.next(true);
+    this.authchanged.next(1);
+    this.auth = 1;
+  }
+  public getauth() {
+    return this.auth;
+  }
+  public dec() {
+    this.auth = 0;
+    this.authchanged.next(0);
+  }
+  public admin() {
+    this.authchanged.next(2);
+    this.auth = 2;
   }
 }

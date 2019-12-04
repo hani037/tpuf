@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text">
-          <h1><strong></strong> Login For GFI training employee</h1>
+          <h1><strong></strong> Login</h1>
         </div>
       </div>
       <div class="row">
@@ -38,13 +38,16 @@
                 <div class="cols-sm-10">
                   <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-                    <input ngModel type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password" required/>
+                    <input ngModel type="password" #password="ngModel" class="form-control" name="password" id="password" minlength="6" placeholder="Enter your Password" required/>
 
                   </div>
                 </div>
               </div>
-
-              <button type="submit" [disabled]="f.invalid" class="btn">Sign in!</button>
+              <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
+              <div style="margin-left: 200px">
+              <h5 *ngIf="et === true" style="color: red"> user not exist </h5>
+              </div>
+                <button type="submit" [disabled]="f.invalid" class="btn">Sign in!</button>
             </form>
           </div>
         </div>

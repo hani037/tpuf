@@ -1,0 +1,23 @@
+[
+  {"name" :"crime et chatiment", "img":"../../assets/images/Crime_et_Chatiment.jpg","description": "Crime et Châtiment  est un roman de l’écrivain russe Fiodor Dostoïevski publié en feuilleton en 1866 et en édition séparée en 1867.",
+    "dis": "true","prix":15,"genre": "roman"
+
+  },
+  { "name" : "l'idiot","img":"../../assets/images/l-idiot-tome-1-et-2-l-edition-complete-2-volumes.jpg","description": "L'Idiot est un roman de l'écrivain russe Fiodor Dostoïevski publié en feuilleton en 1868 et 1869 dans Le Messager russe, et en édition séparée en deux volumes en 1874.",
+    "dis": "false","prix":10,"genre": "roman"
+    },
+  { "name" : "Le Horla","img":"../../assets/images/Guy_de_Maupassant_le_Horla-edition1908.jpg","description": "Le Horla trouve son origine dans une courte nouvelle de Maupassant, Lettre d'un fou, publiée sous le pseudonyme de Maufrigneuse, en 1885 dans le quotidien Gil Blas, qui développe déjà la même histoire, sans que le nom de « Horla » n'y soit mentionné.",
+    "dis": "true","prix":13,"genre": "Horreur"
+  },
+  { "name" : "Le Nom du vent","img":"../../assets/images/Le_Nom_du_vent.jpg","description": "Le Nom du vent (titre original : The Name of the Wind) est le premier tome de la trilogie de fantasy Chronique du tueur de roi, écrite par Patrick Rothfuss. Il a été publié en avril 2007 aux États-Unis3, puis en avril 2009 en France aux éditions Bragelonne4.",
+    "dis": "true","prix":18,"genre": "Fantasy"
+  },
+  { "name" : "Fahrenheit 451","img":"../../assets/images/14a96c379c_50154889_fahrenheit-451.jpg","description": "Fahrenheit 451 (titre original et de la traduction française) est un roman de science-fiction dystopique de Ray Bradbury publié en 1953 aux États-Unis chez l'éditeur Ballantine Books. Il paraît en France en 1955 aux éditions Denoël dans la collection Présence du futur.",
+    "dis": "false","prix":17,"genre": "Fiction"
+  },
+  { "name" : "Le Dernier Vœu","img":"../../assets/images/Le-dernier-voeu.jpg","description": "Le Dernier Vœu (titre original : Ostatnie życzenie) est un recueil de courts récits de fantasy de l'écrivain Andrzej Sapkowski publiés en Pologne en 1993 et en France en 2003.",
+    "dis": "true","prix":22,"genre": "Fantasy"
+  }
+
+
+]
