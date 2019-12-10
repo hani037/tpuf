@@ -7,7 +7,7 @@ import {BookModel} from '../book.model';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-img: string = '../' + this.data.img
+img: string = '../' + this.data.img;
   constructor(@Inject(MAT_DIALOG_DATA) public data: BookModel) {}
 
   ngOnInit() {

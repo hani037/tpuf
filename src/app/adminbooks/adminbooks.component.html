@@ -5,17 +5,20 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">nom</th>
+      <th scope="col">disponibilite</th>
       <th scope="col">prix</th>
-      <th scope="col"><button  (click)="ajouter1()" class="btn btn-primary black">ajouter</button></th>
+      <th scope="col">genre</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let book of books;let i=index">
       <th scope="row" >{{i}}</th>
       <td>{{book.name}}</td>
+      <td>{{book.dis}}</td>
       <td>{{book.prix}}</td>
-      <td>  <button (click)="modifier(i)" class="btn btn-primary black">modifier</button>
-        <button  (click)="supprimer(i)" class="btn btn-primary black">supprimer</button></td>
+      <td>{{book.genre}}</td>
+      <td>  <button (click)="modifier(book)" class="btn btn-primary black">modifier</button>
+        <button  (click)="supprimer(book)" class="btn btn-primary black">supprimer</button></td>
 
     </tr>
 

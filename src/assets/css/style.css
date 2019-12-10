@@ -2310,13 +2310,7 @@ figure.effect-oscar:hover img {
 /* Footer
 ================================================== */
 
-.footer{
-	padding: 60px 0 100px;
-	background: #2e2e2e url(../images/footer-bg.jpg) no-repeat center 0;
-	background-size: cover;
-	color: #fff;
-	font-size: 14px;
-}
+
 
 .footer-logo{
 	margin-bottom: 20px;

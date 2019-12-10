@@ -7,13 +7,16 @@ import {BookModel} from './book.model';
 })
 
 export class FilterPipe implements PipeTransform {
-  transform(items: BookModel[], arg1: string, arg2: string): any {
-    if (arg2 === 'option1') {
-      return items.filter(item => item.name.toUpperCase().indexOf(arg1.toUpperCase()) !== -1);
-    } else if (arg2 === 'option3') {
-      return items.filter(item => item.genre.toUpperCase().indexOf(arg1.toUpperCase()) !== -1);
+  transform(items: BookModel[], arg1: string, arg2: string, arg3: string): any {
+    if (arg2 === '') {
+      items = items.filter(item => item.name.toUpperCase().indexOf(arg1.toUpperCase()) !== -1);
+      items = items.filter(item => item.genre.toUpperCase().indexOf(arg3.toUpperCase()) !== -1);
+      return items;
     } else {
-      return items.filter(item => item.prix <= Number(arg1));
+      items = items.filter(item => item.name.toUpperCase().indexOf(arg1.toUpperCase()) !== -1);
+      items = items.filter(item => item.genre.toUpperCase().indexOf(arg3.toUpperCase()) !== -1);
+      items = items.filter(item => item.prix <= Number(arg2));
+      return items;
     }
   }
 }

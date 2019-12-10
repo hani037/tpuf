@@ -1,6 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
 import {BookModel} from '../book.model';
+import {UsersService} from '../users.service';
 
 @Component({
   selector: 'app-acheter',
@@ -9,11 +10,11 @@ import {BookModel} from '../book.model';
 })
 export class AcheterComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: number) {}
+ constructor(@Inject(MAT_DIALOG_DATA) public data: any, private userservice: UsersService) {}
 
-  ngOnInit() {
-  }
-  onSubmit(f) {
-return;
-  }
+ngOnInit() {
+}
+onSubmit(f) {
+  this.userservice.cancel(this.data);
+}
 }

@@ -1,0 +1,56 @@
+<h1 mat-dialog-title >{{da.type}}</h1>
+<div mat-dialog-content style="height: 550px;width: 360px" >
+  <form  action="" method="post" (ngSubmit)="onSubmit(f)" #f="ngForm" class="login-form" ngNativeValidate>
+    <div class="form-group">
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+          <input  [ngModel]="da.bo.name"  #name="ngModel" type="text"  class="form-control" name="name" id="name"  placeholder="name" required/>
+
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+          <input [ngModel]="da.bo.dis"  #dis="ngModel" type="text"  class="form-control" name="dis" id="dis"  placeholder="disponibilite" required/>
+
+        </div>
+      </div>
+    </div>
+    <div  class="form-group">
+      <div  class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+          <textarea rows="5" ngModel [ngModel]="da.bo.description"  #description="ngModel" type="text"  class="form-control" name="description" id="description"  minlength="6" placeholder="description" required>
+          </textarea>
+        </div>
+      </div>
+      </div>
+    <div  class="form-group">
+      <div  class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+          <input ngModel [ngModel]="da.bo.prix"  #prix="ngModel" type="number"  class="form-control" name="prix" id="prix"  placeholder="prix" required/>
+
+        </div>
+      </div>
+    </div>
+    <div  class="form-group">
+      <div  class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-book fa" aria-hidden="true"></i></span>
+          <input ngModel [ngModel]="da.bo.genre"  #genre="ngModel" type="text"  class="form-control" name="genre" id="genre"   placeholder="genre" required/>
+
+        </div>
+      </div>
+    </div>
+    <div mat-dialog-actions>
+      <button style="margin-left: auto;margin-right: auto" class="btn btn-primary " mat-button mat-dialog-close>Cancel</button>
+      <button type="submit" style="margin-left: auto;margin-right: auto" class="btn btn-primary " mat-button >{{da.type}}</button>
+    </div>
+  </form>
+</div>
+
+

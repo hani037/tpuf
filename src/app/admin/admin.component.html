@@ -8,17 +8,17 @@
       <th scope="col">email</th>
       <th scope="col">role
       </th>
-      <th scope="col"><button  (click)="ajouter1()" class="btn btn-primary black">ajouter</button></th>
+      <th scope="col"><button  (click)="ajouter()" class="btn btn-primary black">ajouter</button></th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users;let i=index">
+    <tr *ngFor="let user of users|filter2;let i=index">
       <th scope="row" >{{i}}</th>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
       <td>{{user.role}}</td>
-      <td>  <button (click)="modifier(i)" class="btn btn-primary black">modifier</button>
-        <button  (click)="supprimer(i)" class="btn btn-primary black">supprimer</button></td>
+      <td>  <button (click)="modifier(user)" class="btn btn-primary black">modifier</button>
+        <button  (click)="supprimer(user)" class="btn btn-primary black">supprimer</button></td>
 
     </tr>
 

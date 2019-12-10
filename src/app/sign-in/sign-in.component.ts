@@ -25,6 +25,7 @@ export class SignInComponent implements OnInit {
     if (!us) {
       this.et = true ;
     } else if (us.role === 'user') {
+      this.users.setus(us.id);
       this.authService.changeauth();
       this.router.navigate([''], {relativeTo: this.route});
     } else if (us.role === 'root') {

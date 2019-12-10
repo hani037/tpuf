@@ -1,0 +1,41 @@
+<h1 mat-dialog-title >{{da.type}}</h1>
+<div mat-dialog-content [ngStyle]="{height: da.type ==='ajouter' ? '290px' : '200px'}" >
+  <form  action="" method="post" (ngSubmit)="onSubmit(f)" #f="ngForm" class="login-form" ngNativeValidate>
+    <div class="form-group">
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lemon-o fa" aria-hidden="true"></i></span>
+          <input  [ngModel]="da.us.name"  #name="ngModel" type="text"  class="form-control" name="name" id="name"  placeholder="name" required/>
+
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+          <input [ngModel]="da.us.email" email #email="ngModel" type="email"  class="form-control" name="email" id="email"  placeholder="email" required/>
+
+        </div>
+      </div>
+    </div>
+    <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid  email!</span>
+    <div *ngIf="da.type == 'ajouter'" class="form-group">
+      <div  class="cols-sm-10">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+          <input ngModel  #password="ngModel" type="password"  class="form-control" name="password" id="password"  minlength="6" placeholder="password" required/>
+
+        </div>
+      </div>
+      <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
+    </div>
+    <h5 *ngIf="et === true" style="color: red"> user already exists </h5>
+    <div mat-dialog-actions>
+      <button style="margin-left: auto;margin-right: auto" class="btn btn-primary " mat-button mat-dialog-close>Cancel</button>
+      <button type="submit" style="margin-left: auto;margin-right: auto" class="btn btn-primary " mat-button >{{da.type}}</button>
+    </div>
+  </form>
+</div>
+
+

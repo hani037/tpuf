@@ -17,7 +17,11 @@ import { FilterPipe } from './filter.pipe';
 import { AcheterComponent } from './acheter/acheter.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminbooksComponent } from './adminbooks/adminbooks.component';
-
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { Filter2Pipe } from './filter2.pipe';
+import { DialogbooksComponent } from './dialogbooks/dialogbooks.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +34,11 @@ import { AdminbooksComponent } from './adminbooks/adminbooks.component';
     FilterPipe,
     AcheterComponent,
     AdminComponent,
-    AdminbooksComponent
+    AdminbooksComponent,
+    SignUpComponent,
+    AdminUserComponent,
+    Filter2Pipe,
+    DialogbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +47,11 @@ import { AdminbooksComponent } from './adminbooks/adminbooks.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DetailsComponent, AcheterComponent]
+  entryComponents: [DetailsComponent, AcheterComponent, AdminUserComponent, DialogbooksComponent]
 })
 export class AppModule { }

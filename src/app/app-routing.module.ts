@@ -9,6 +9,7 @@ import {AuthGuard} from './auth-guard.service';
 import {AdminComponent} from './admin/admin.component';
 import {AuthguardadminService} from './authguardadmin.service';
 import {AdminbooksComponent} from './adminbooks/adminbooks.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'sign-in',
     component: SignInComponent
+  },
+  {
+    path: 'sign-up',
+    component: SignUpComponent
   },
   {
     path: 'admin',

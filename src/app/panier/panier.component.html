@@ -6,9 +6,10 @@
         <div   class="grid_item wd44 col-sm-12">
 
           <div style="margin-top: 135px" class="banner_content text-center">
-            <img style="width: 320px;height:250px; margin-left: 10px" [src]="book.book.img">
-            <h3 >{{book.book.name}}</h3>
+            <img style="width: 320px;height:250px; margin-left: 10px" [src]="book.bo.img">
+            <h3 >{{book.bo.name}}</h3>
             <h3 >nombre de piéce:{{book.nb}}</h3>
+            <button class="btn btn-primary red" (click)="cancel(book)">cancel</button>
             <button class="btn btn-primary red" (click)="acheter(book)">acheter</button>
           </div>
         </div>
